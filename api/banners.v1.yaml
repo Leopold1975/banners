@@ -327,3 +327,110 @@ paths:
                 properties:
                   error:
                     type: string
+  /user:
+    post:
+      summary: Создание пользователя
+      parameters:
+        - in: header
+          name: token
+          required: false
+          description: Токен админа
+          schema:
+            type: string
+            example: "admin_token"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: Имя пользователя
+                password:
+                  type: string
+                  description: Пароль
+                role:
+                  type: string
+                  description: Роль
+                tag_ids:
+                  nullable: true
+                  type: array
+                  description: Идентификаторы тэгов
+                  items:
+                    type: integer
+                feature_id:
+                  nullable: true
+                  type: integer
+                  description: Идентификатор фичи
+      responses:
+        '201':
+          description: Пользователь успешно создан
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Токен пользователя
+        '400':
+          description: Некорректные данные
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '409':
+          description: Пользователь уже существует
+  /auth:
+    post:
+      summary: Аутентификация пользователя
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: Имя пользователя
+                password:
+                  type: string
+                  description: Пароль
+      responses:
+        '200':
+          description: Пользователь авторизован
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Токен пользователя
+        '400':
+          description: Некорректные данные
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '401':
+          description: Пользователь не авторизован
+        '500':
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+  
