@@ -23,6 +23,10 @@ func GetToken(user models.User, ttl time.Duration, secret string) (string, error
 		return "", ErrInvalidToken
 	}
 
+	if user.Role == "" {
+		return "", ErrNoClaim
+	}
+
 	claims["role"] = user.Role
 	claims["exp"] = time.Now().Add(ttl).Unix()
 
@@ -43,6 +47,12 @@ func ValidateTokenRole(tokenString string, secret string) (string, error) {
 		return []byte(secret), nil
 	})
 	if err != nil {
+		jwtErr := new(jwt.ValidationError)
+		if errors.As(err, &jwtErr) {
+			if jwtErr.Errors == jwt.ValidationErrorExpired {
+				return "", ErrTokenExpired
+			}
+		}
 		return "", fmt.Errorf("parse token error: %w", err)
 	}
 

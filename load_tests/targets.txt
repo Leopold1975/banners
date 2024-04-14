@@ -1,0 +1,59 @@
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=1
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=7
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=1&tag_id=1
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=3&tag_id=6
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=2
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=3
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=2
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=1&tag_id=4
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=5
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=2
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=5&tag_id=6
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=3&tag_id=1
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=1&tag_id=4
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=1&tag_id=1&use_last_revision=true
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0
+
+GET http://127.0.0.1:5555/v1/user_banner?feature_id=1&tag_id=6&use_last_revision=true
+Content-Type: application/json
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTMyMDkzOTksInJvbGUiOiJ1c2VyIn0.VMDO6s_edCPDbLtc2MNlNCAwXUcSaor2aTtQNHAdpk0

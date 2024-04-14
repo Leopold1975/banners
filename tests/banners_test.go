@@ -416,6 +416,39 @@ func (bs *BannerSuite) TestOtherScenarios() {
 	bs.Require().Equal(http.StatusNotFound, resp.StatusCode)
 }
 
+func (bs *BannerSuite) TestCreateUser() {
+	newUser := models.User{
+		Username:     "user1",
+		PasswordHash: "password",
+		Role:         "user",
+		Feature:      2,
+		Tags:         []int{1, 2},
+	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
+	defer cancel()
+
+	resp, err := bs.client.PostUser(ctx, &oapi.PostUserParams{}, oapi.PostUserJSONRequestBody(
+		oapi.PostUserJSONBody{
+			Username:  &newUser.Username,
+			Password:  &newUser.PasswordHash,
+			Role:      &newUser.Role,
+			FeatureId: &newUser.Feature,
+			TagIds:    &newUser.Tags,
+		},
+	))
+	bs.Require().NoError(err, "expected %v	actual %v", nil, err)
+
+	createUserResp := server.CreateUserResponse{}
+
+	dec := json.NewDecoder(resp.Body)
+	err = dec.Decode(&createUserResp)
+	bs.Require().NoError(err, "expected %v	actual %v", nil, err)
+	resp.Body.Close()
+
+	bs.Require().NotEqual("", createUserResp.Token)
+}
+
 func TestBannerServiceSuite(t *testing.T) {
 	suite.Run(t, new(BannerSuite))
 }
