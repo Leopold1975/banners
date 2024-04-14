@@ -22,3 +22,9 @@ down:
 
 test:
 	CGO_ENABLED=1 go test -v -race -timeout=30s ./...
+
+load_test: 
+	(which vegeta >/dev/null) || \
+	(go install github.com/tsenart/vegeta@latest)
+
+	./load_tests/test.sh
