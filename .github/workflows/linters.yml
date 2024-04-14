@@ -1,0 +1,21 @@
+name: Tests and linters for url_shortener
+
+on: push
+
+permissions:
+    contents: read
+
+jobs: 
+    linters:
+        name: linters
+        runs-on: ubuntu-22.04
+        steps:
+          - uses: actions/checkout@v4
+          - uses: actions/setup-go@v5
+            with:
+              go-version: '1.22'
+              cache: false
+          - name: golangci-lint
+            uses: golangci/golangci-lint-action@v4
+            with:
+                version: v1.57
