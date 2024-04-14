@@ -433,4 +433,15 @@ paths:
                 properties:
                   error:
                     type: string
+  /docs:
+    get:
+      summary: Документация API
+      responses:
+        '200':
+          description: Страница документации API
+          content:
+            text/html:
+              schema:
+                type: string
+                format: binary
   

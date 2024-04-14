@@ -1,0 +1,10 @@
+FROM ubuntu:22.04
+
+WORKDIR /banner_service
+
+COPY ./bin ./bin
+COPY ./configs ./configs
+COPY ./migrations ./migrations
+COPY ./docs ./docs
+
+ENTRYPOINT [ "/banner_service/bin/banners", "--config", "./configs/config_dev.yaml" ]
