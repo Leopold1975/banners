@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  banners_db:
+    image: 'postgres:16.1'
+    container_name: banners_db
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+    - ../.init/init.sql:/docker-entrypoint-initdb.d/init.sql
+  redis_cache:
+    image: 'redis:7.0-alpine3.19'
+    container_name: 'redis_cache'
+  banners_service:
+    container_name: banners_service
+    build:
+      context: ./..
+      dockerfile: ./build/Dockerfile.banners
+    ports:
+      - '5555:5555'
+    links:
+      - banners_db
+      - redis_cache
+    depends_on:
+      - banners_db
+      - redis_cache
+

@@ -1,0 +1,32 @@
+server:
+  addr: localhost:7777
+  readTimeout: 10s
+  idleTimeout: 10s
+  writeTimeout: 10s
+
+logger:
+  level: debug
+  output: 
+  #  - logs/log.log # example
+  errOutput:
+  #  - logs/err_log.log # example
+
+db:
+  addr: 127.0.0.1:7778
+  username: postgres
+  password: postgres
+  db: banners
+  sslmode: disable
+  maxConns: 10
+  reload: false
+  version: 1
+
+auth:
+  secret: secret
+  ttl: 24h
+
+rdb:
+  addr: 127.0.0.1:7779
+  password: ""
+  db: 0
+  exp: 2s

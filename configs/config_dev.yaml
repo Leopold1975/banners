@@ -1,0 +1,32 @@
+server:
+  addr: 0.0.0.0:5555
+  readTimeout: 5s
+  idleTimeout: 5s
+  writeTimeout: 5s
+
+logger:
+  level: debug
+  output: 
+  #  - logs/log.log # example
+  errOutput:
+  #  - logs/err_log.log # example
+
+db:
+  addr: banners_db:5432
+  username: postgres
+  password: postgres
+  db: banners
+  sslmode: disable
+  maxConns: 10
+  reload: false
+  version: 1
+
+auth:
+  secret: secret
+  ttl: 24h
+
+rdb:
+  addr: redis_cache:6379
+  password: ""
+  db: 0
+  exp: 5m
