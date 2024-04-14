@@ -53,6 +53,7 @@ func ValidateTokenRole(tokenString string, secret string) (string, error) {
 				return "", ErrTokenExpired
 			}
 		}
+
 		return "", fmt.Errorf("parse token error: %w", err)
 	}
 
