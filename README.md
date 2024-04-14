@@ -1,4 +1,3 @@
-[![Linters](https://github.com/Leopold1975/banners/actions/workflows/linters.yml/badge.svg)](https://github.com/Leopold1975/banners/actions/workflows/linters.yml)
 # Banners Service
 [![Linters](https://github.com/Leopold1975/banners/actions/workflows/linters.yml/badge.svg)](https://github.com/Leopold1975/banners/actions/workflows/linters.yml)
 
